@@ -1,0 +1,35 @@
+---
+# these are flat, so overriding them is easier
+# they are namespaced
+
+# mariadb configuration
+repox_mariadb_username: repox
+repox_mariadb_password: repox
+repox_mariadb_database: repoxdb
+repox_mariadb_privileges: ALL
+
+# configurable filepaths
+repox_path_source: /home/vagrant/repox
+repox_path_data: /data
+repox_path_log: /var/log
+
+# the user that logs in to the web interface
+repox_admin_username: admin
+repox_admin_passhash: "$2a$10$uBWYCTU.nW3ewTW3uqRl8O3mih0ulgfQrd57l6AcE75ptZa4tniSq"
+repox_admin_email: root@localhost
+
+# what version of REPOX to check out
+repox_source_tag: v3.1.0
+
+# the LDAP configuration that was in the REPOX source
+repox_ldap_host: "130.87.237.187:636"
+repox_ldap_password: pass
+
+# not sure where this is used, but it probably needs to be changed
+repox_base_urn: "oai:the.european.library."
+
+# REPOX assumes a mail server, but it doesn't provide one
+repox_smtp_address: root@localhost
+repox_smtp_password: nope
+repox_smtp_host: localhost
+repox_smtp_port: 465
