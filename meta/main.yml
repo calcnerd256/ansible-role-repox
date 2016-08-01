@@ -1,1 +1,8 @@
 ---
+galaxy_info:
+  author: Montana Rowe
+  company: OU Libraries
+  description: REPOX webserver
+  min_ansible_version: 1.9
+  license: ALL RIGHTS RESERVED
+dependencies: []
