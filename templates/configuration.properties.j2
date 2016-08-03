@@ -1,25 +1,25 @@
 # Directory of the REPOX Repository (XML files)
-repository.dir = {{ path.data }}/repoxData/repository
+repository.dir = {{ repox_path_data }}/repoxData/repository
 #repository.dir = /data/repox/repository
 
 # Directory of the REPOX XML Dynamic Configuration Files (DataProviders, Statistics)
-xmlConfig.dir = {{ path.data }}/repoxData/configuration
+xmlConfig.dir = {{ repox_path_data }}/repoxData/configuration
 #xmlConfig.dir = /data/repox/configuration
 
 # Directory for the temporary OAI-PMH requests
-oairequests.dir = {{ path.data }}/repoxData/[temp]OAI-PMH_Requests
+oairequests.dir = {{ repox_path_data }}/repoxData/[temp]OAI-PMH_Requests
 #oairequests.dir = /data/repox/[temp]OAI-PMH_Requests
 
 # Directory for the temporary FTP requests
-ftprequests.dir = {{ path.data }}/repoxData/[temp]FTP_Requests
+ftprequests.dir = {{ repox_path_data }}/repoxData/[temp]FTP_Requests
 #ftprequests.dir = /data/repox/[temp]FTP_Requests
 
 # Directory for the temporary HTTP requests
-httprequests.dir = {{ path.data }}/repoxData/[temp]HTTP_Requests
+httprequests.dir = {{ repox_path_data }}/repoxData/[temp]HTTP_Requests
 #httprequests.dir = /data/repox/[temp]HTTP_Requests
 
 # Export folder
-exportDefaultFolder = {{ path.data }}/repoxData/export
+exportDefaultFolder = {{ repox_path_data }}/repoxData/export
 #exportDefaultFolder = /data/repox/export
 
 # Sample Record's number
@@ -38,12 +38,12 @@ ldapBasePath = ou=office\,ou=users\,ou=tel\,dc=theeuropeanlibrary\,dc=org
 ##################### ADVANCED PROPERTIES ################################
 ##########################################################################
 # Administrator Email(Used for retrieving log information)
-administrator.email = {{ email.admin }}
+administrator.email = {{ repox_admin_email }}
 #Default Repox Sender eamil, used for sending emails
-default.email = {{ email.address }}
-default.email.pass = {{ email.password }}
-smtp.server = {{ email.host }}
-smtp.port = {{ email.port }}
+default.email = {{ repox_smtp_address }}
+default.email.pass = {{ repox_smtp_password }}
+smtp.server = {{ repox_smtp_host }}
+smtp.port = {{ repox_smtp_port }}
 
 #Database: PostgreSQL
 #database.driverClassName = org.postgresql.Driver
