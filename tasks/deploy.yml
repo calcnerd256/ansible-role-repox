@@ -5,5 +5,5 @@
     dest: "{{ repox_path_tomcat }}/webapps/"
 - name: replace default admin user
   template:
-    src: "{{ repox_path_playbook }}/users.xml.j2"
+    src: users.xml.j2
     dest: "{{ repox_path_data }}/repoxData/configuration/users.xml"

@@ -6,7 +6,7 @@
     version: "{{ repox_source_tag }}"
 - name: replace default repox configuration
   template:
-    src: "{{ repox_path_playbook }}/configuration.properties.j2"
+    src: /configuration.properties.j2
     dest: "{{ repox_path_source }}/resources/src/main/resources/configuration.properties"
 - name: data directories
   file:
