@@ -1,9 +1,9 @@
 ---
 - name: install the repox war into tomcat
   copy:
-    src: "{{ path.source }}/gui/target/repox.war"
-    dest: "{{ path.tomcat }}/webapps/"
+    src: "{{ repox_path_source }}/gui/target/repox.war"
+    dest: "{{ repox_path_tomcat }}/webapps/"
 - name: replace default admin user
   template:
-    src: "{{ path.playbook }}/users.xml.j2"
-    dest: "{{ path.data }}/repoxData/configuration/users.xml"
+    src: "{{ repox_path_playbook }}/users.xml.j2"
+    dest: "{{ repox_path_data }}/repoxData/configuration/users.xml"
