@@ -3,6 +3,8 @@
 # they are namespaced
 
 # mariadb configuration
+repox_mariadb_host: localhost
+repox_mariadb_port: 3306
 repox_mariadb_username: repox
 repox_mariadb_password: repox
 repox_mariadb_database: repoxdb
@@ -12,6 +14,7 @@ repox_mariadb_privileges: ALL
 repox_path_source: /home/vagrant/repox
 repox_path_data: /data
 repox_path_log: /var/log
+repox_path_tomcat: /usr/share/tomcat
 
 # the user that logs in to the web interface
 repox_admin_username: admin
