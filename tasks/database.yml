@@ -1,12 +1,12 @@
 ---
 - name: repox database
   mysql_db:
-    name: "{{ db.database }}"
+    name: "{{ repox_mariadb_database }}"
     state: present
 - name: repox user for database
   mysql_user:
-    name: "{{ db.username }}"
-    host: "{{ db.host }}"
-    password: "{{ db.password }}"
-    priv: "{{ db.database }}.*:{{ db.privileges }}"
+    name: "{{ repox_mariadb_username }}"
+    host: "{{ repox_mariadb_host }}"
+    password: "{{ repox_mariadb_password }}"
+    priv: "{{ repox_mariadb_database }}.*:{{ repox_mariadb_privileges }}"
     state: present
