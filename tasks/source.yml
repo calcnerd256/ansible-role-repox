@@ -3,7 +3,7 @@
   git:
     repo: https://github.com/europeana/REPOX.git
     dest: "{{ repox_path_source }}/"
-    version: "{{ source_tag }}"
+    version: "{{ repox_source_tag }}"
 - name: replace default repox configuration
   template:
     src: "{{ repox_path_playbook }}/configuration.properties.j2"
