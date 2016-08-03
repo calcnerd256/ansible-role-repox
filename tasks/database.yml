@@ -1,0 +1,12 @@
+---
+- name: repox database
+  mysql_db:
+    name: "{{ db.database }}"
+    state: present
+- name: repox user for database
+  mysql_user:
+    name: "{{ db.username }}"
+    host: "{{ db.host }}"
+    password: "{{ db.password }}"
+    priv: "{{ db.database }}.*:{{ db.privileges }}"
+    state: present

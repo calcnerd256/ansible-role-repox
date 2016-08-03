@@ -1,0 +1,10 @@
+---
+- include: yum.yml
+- include: services.yml
+- include: database.yml
+- include: source.yml
+- include: build.yml
+- include: deploy.yml
+  vars:
+    admin: "{{ repox_admin }}"
+# TODO: set up e-mail
