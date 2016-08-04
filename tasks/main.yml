@@ -1,10 +1,13 @@
 ---
 - include: yum.yml
+  sudo: yes
 - include: services.yml
+  sudo: yes
 - include: database.yml
+  sudo: yes
 - include: source.yml
+  sudo: yes
 - include: build.yml
+  sudo: yes
 - include: deploy.yml
-  vars:
-    admin: "{{ repox_admin }}"
-# TODO: set up e-mail
+  sudo: yes
