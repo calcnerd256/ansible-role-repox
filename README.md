@@ -16,10 +16,10 @@ gotchas:
   smtp is wrong
 
 TODO:
-  finish e-mail configuration and testing
-  test with SELinux
-  remove default password from role
-  remove remaining vagrant-specific bits.
+  * finish e-mail configuration and testing
+  * test with SELinux
+  * remove default password from role
+  * remove remaining vagrant-specific bits.
 
 
 Requirements
