@@ -35,10 +35,10 @@ See defaults/main.yml
 Dependencies
 ------------
 
-OULibraries.centos7
-OULibraries.repox
-OULibraries.postfix-mta
-OULibraries.users
+* [OULibraries.centos7](https://github.com/OULibraries/ansible-role-centos7 "GitHub repo")
+* [OULibraries.repox](https://github.com/OULibraries/ansible-role-repox "GitHub repo")
+* [OULibraries.postfix-mta](https://github.com/OULibraries/ansible-role-postfix-mta "GitHub repo")
+* [OULibraries.users](https://github.com/OULibraries/ansible-role-users "GitHub repo")
 
 Example Playbook
 ----------------
