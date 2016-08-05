@@ -3,17 +3,20 @@
 # they are namespaced
 
 # mariadb configuration
+#  host and port don't support configuration
 repox_mariadb_host: localhost
 repox_mariadb_port: 3306
 repox_mariadb_username: repox
 repox_mariadb_password: repox
 repox_mariadb_database: repoxdb
+#  I'm not sure what repox_mariadb_privileges ought to be
 repox_mariadb_privileges: ALL
 
 # configurable filepaths
 repox_path_source: /home/vagrant/repox
 repox_path_data: /data
 repox_path_log: /var/log
+#  repox_path_tomcat doesn't support configuration
 repox_path_tomcat: /usr/share/tomcat
 
 # the user that logs in to the web interface
@@ -22,6 +25,7 @@ repox_admin_passhash: "$2a$10$uBWYCTU.nW3ewTW3uqRl8O3mih0ulgfQrd57l6AcE75ptZa4tn
 repox_admin_email: root@localhost
 
 # what version of REPOX to check out
+#  this variable doesn't support configuration
 repox_source_tag: v3.1.0
 
 # the LDAP configuration that was in the REPOX source
