@@ -1,0 +1,69 @@
+# Directory of the REPOX Repository (XML files)
+repository.dir = {{ repox_path_data }}/repoxData/repository
+#repository.dir = /data/repox/repository
+
+# Directory of the REPOX XML Dynamic Configuration Files (DataProviders, Statistics)
+xmlConfig.dir = {{ repox_path_data }}/repoxData/configuration
+#xmlConfig.dir = /data/repox/configuration
+
+# Directory for the temporary OAI-PMH requests
+oairequests.dir = {{ repox_path_data }}/repoxData/[temp]OAI-PMH_Requests
+#oairequests.dir = /data/repox/[temp]OAI-PMH_Requests
+
+# Directory for the temporary FTP requests
+ftprequests.dir = {{ repox_path_data }}/repoxData/[temp]FTP_Requests
+#ftprequests.dir = /data/repox/[temp]FTP_Requests
+
+# Directory for the temporary HTTP requests
+httprequests.dir = {{ repox_path_data }}/repoxData/[temp]HTTP_Requests
+#httprequests.dir = /data/repox/[temp]HTTP_Requests
+
+# Export folder
+exportDefaultFolder = {{ repox_path_data }}/repoxData/export
+#exportDefaultFolder = /data/repox/export
+
+# Sample Record's number
+sample.records = 1000
+
+# URN prefix of this REPOX instance (syntax is urn:[instance identifier]:)
+baseurn = {{ repox_base_urn }}
+
+#LDAP Configuration, commas must be escaped
+ldapHost = ldaps://{{ repox_ldap_host }}
+ldapRootDN = uid=tel-ldap\,ou=users\,ou=system
+ldapRootPassword = {{ repox_ldap_password }}
+ldapBasePath = ou=office\,ou=users\,ou=tel\,dc=theeuropeanlibrary\,dc=org
+
+##########################################################################
+##################### ADVANCED PROPERTIES ################################
+##########################################################################
+# Administrator Email(Used for retrieving log information)
+administrator.email = {{ repox_admin_email }}
+#Default Repox Sender eamil, used for sending emails
+default.email = {{ repox_smtp_address }}
+default.email.pass = {{ repox_smtp_password }}
+smtp.server = {{ repox_smtp_host }}
+smtp.port = {{ repox_smtp_port }}
+
+#Database: PostgreSQL
+#database.driverClassName = org.postgresql.Driver
+#database.url = jdbc:postgresql://localhost/repox
+#database.user = repox
+#database.password = repox
+
+#Database: PostgreSQL
+#database.driverClassName = org.postgresql.Driver
+#database.url = jdbc:postgresql://localhost/repox
+#database.user = repox
+#database.password = repox
+
+#Database: MySQL
+database.driverClassName = com.mysql.jdbc.Driver
+database.url = jdbc:mysql://{{ repox_mariadb_host }}:{{ repox_mariadb_port }}/{{ repox_mariadb_database }}
+database.user = {{ repox_mariadb_username }}
+database.password = {{ repox_mariadb_password }}
+
+userCountriesTxtFile = true
+sendEmailAfterIngest = false
+useMailSSLAuthentication = true
+useOAINamespace = false

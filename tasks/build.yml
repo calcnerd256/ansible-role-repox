@@ -1,0 +1,6 @@
+---
+- name: compile repox with maven
+  command: "mvn -B -e -l {{ repox_path_log }}/maven.log -q clean install -Pproduction"
+  args:
+    chdir: "{{ repox_path_source }}/"
+    creates: "{{ repox_path_source }}/gui/target/repox.war"

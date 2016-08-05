@@ -1,0 +1,24 @@
+---
+- name: repox source code
+  git:
+    repo: https://github.com/europeana/REPOX.git
+    dest: "{{ repox_path_source }}/"
+    version: "{{ repox_source_tag }}"
+- name: replace default repox configuration
+  template:
+    src: configuration.properties.j2
+    dest: "{{ repox_path_source }}/resources/src/main/resources/configuration.properties"
+- name: data directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: tomcat
+  with_items:
+  - "{{ repox_path_data }}"
+  - "{{ repox_path_data }}/repoxData"
+  - "{{ repox_path_data }}/repoxData/repository"
+  - "{{ repox_path_data }}/repoxData/configuration"
+  - "{{ repox_path_data }}/repoxData/[temp]OAI-PMH_Requests"
+  - "{{ repox_path_data }}/repoxData/[temp]FTP_Requests"
+  - "{{ repox_path_data }}/repoxData/[temp]HTTP_Requests"
+  - "{{ repox_path_data }}/repoxData/export"
