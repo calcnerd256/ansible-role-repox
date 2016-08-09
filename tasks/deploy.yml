@@ -1,4 +1,7 @@
 ---
+- name: hash admin password for repox user configuration file
+  command: /usr/bin/python -c "from passlib.hash import bcrypt; print(bcrypt.encrypt(\"{{ repox_admin_password }}\"))"
+  register: repox_admin_passhash_cmd
 - name: replace default admin user
   template:
     src: users.xml.j2

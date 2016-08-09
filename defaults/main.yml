@@ -21,7 +21,7 @@ repox_path_tomcat: /usr/share/tomcat
 
 # the user that logs in to the web interface
 repox_admin_username: admin
-repox_admin_passhash: "$2a$10$uBWYCTU.nW3ewTW3uqRl8O3mih0ulgfQrd57l6AcE75ptZa4tniSq"
+repox_admin_password: admin
 repox_admin_email: root@localhost
 
 # what version of REPOX to check out
