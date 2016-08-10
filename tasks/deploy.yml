@@ -1,6 +1,7 @@
 ---
 - name: install the repox war into tomcat
   copy:
+    remote_src: True
     src: "{{ repox_path_source }}/gui/target/repox.war"
     dest: "{{ repox_path_tomcat }}/webapps/"
 - name: replace default admin user
