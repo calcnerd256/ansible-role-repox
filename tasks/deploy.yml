@@ -9,5 +9,6 @@
 - name: install the repox war into tomcat
   # https://benhutchison.wordpress.com/2008/07/30/how-to-configure-tomcat-root-context/
   copy:
+    remote_src: True
     src: "{{ repox_path_source }}/gui/target/repox.war"
     dest: "{{ repox_path_tomcat }}/webapps/ROOT.war"
