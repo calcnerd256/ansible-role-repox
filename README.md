@@ -17,9 +17,7 @@ gotchas:
 
 TODO:
   * [finish e-mail configuration and testing](https://github.com/OULibraries/ansible-role-repox/issues/4 "GitHub issue 4")
-  * [test with SELinux](https://github.com/OULibraries/ansible-role-repox/issues/1 "GitHub issue 1")
   * remove default password from role
-  * [remove remaining vagrant-specific bits.](https://github.com/OULibraries/ansible-role-repox/issues/3 "GitHub issue 3")
 
 
 Requirements
