@@ -11,3 +11,12 @@
   - maven
   - patch
   - MySQL-python
+  - python-devel
+  - libffi-devel
+- name: packages used by the python part of the repox configuration/installation
+  pip:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+  - passlib
+  - bcrypt

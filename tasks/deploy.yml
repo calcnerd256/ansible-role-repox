@@ -1,10 +1,16 @@
 ---
-- name: install the repox war into tomcat
-  copy:
-    remote_src: True
-    src: "{{ repox_path_source }}/gui/target/repox.war"
-    dest: "{{ repox_path_tomcat }}/webapps/"
+- name: hash admin password for repox user configuration file
+  command: /usr/bin/python -c "from passlib.hash import bcrypt; print(bcrypt.encrypt(\"{{ repox_admin_password }}\"))"
+  register: repox_admin_passhash_cmd
 - name: replace default admin user
   template:
     src: users.xml.j2
     dest: "{{ repox_path_data }}/repoxData/configuration/users.xml"
+- name: install the repox war into tomcat
+  # https://benhutchison.wordpress.com/2008/07/30/how-to-configure-tomcat-root-context/
+  copy:
+    remote_src: True
+    src: "{{ repox_path_source }}/gui/target/repox.war"
+    dest: "{{ repox_path_tomcat }}/webapps/ROOT.war"
+- name: set the SELINUX context for tomcat to use the REPOX WAR
+  command: /bin/bash -c "semanage fcontext -a -t tomcat_var_lib_t {{ repox_path_tomcat }}/webapps/ROOT.war && restorecon -R {{ repox_path_tomcat }}/webapps/"
