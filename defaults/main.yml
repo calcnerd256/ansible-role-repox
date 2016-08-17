@@ -13,7 +13,7 @@ repox_mariadb_database: repoxdb
 repox_mariadb_privileges: ALL
 
 # configurable filepaths
-repox_path_source: /home/vagrant/repox
+repox_path_source: /usr/src/repox
 repox_path_data: /data
 repox_path_log: /var/log
 #  repox_path_tomcat doesn't support configuration
