@@ -61,5 +61,5 @@ TBD
 Author Information
 ------------------
 
-Montana Rowe
-Jason Sherman
+* Montana Rowe
+* Jason Sherman
